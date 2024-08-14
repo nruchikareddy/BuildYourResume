@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Builder</h1>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="summary">Summary:</label>
+                <textarea id="summary" name="summary" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <div id="education-container">
+                    <textarea class="education" name="education" required></textarea>
+                </div>
+                <button type="button" id="add-education">Add Education</button>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <div id="experience-container">
+                    <textarea class="experience" name="experience" required></textarea>
+                </div>
+                <button type="button" id="add-experience">Add Experience</button>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea id="skills" name="skills" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="template">Select Template:</label>
+                <select id="template" name="template">
+                    <option value="template1">Template 1</option>
+                    <option value="template2">Template 2</option>
+                    <option value="template3">Template 3</option>
+                </select>
+            </div>
+            <button type="submit">Generate Resume</button>
+            <button type="button" id="download-pdf">Download PDF</button>
+        </form>
+        <div id="resume-output" class="resume-output"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
